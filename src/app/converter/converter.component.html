@@ -1,0 +1,23 @@
+<div>
+    <label for="inputCurrency1">Первая валюта:</label>
+    <input id="inputCurrency1" type="number" [(ngModel)]="inputCurrency1" (input)="convertCurrency(1)">
+    <select [(ngModel)]="selectedCurrency1" (change)="convertCurrency(1)">
+      <option value="UAH">UAH</option>
+      <option value="USD">USD</option>
+      <option value="EUR">EUR</option>
+    </select>
+  </div>
+  
+  <div>
+    <label for="inputCurrency2">Вторая валюта:</label>
+    <input id="inputCurrency2" type="number" [(ngModel)]="inputCurrency2" (input)="convertCurrency(2)">
+    <select [(ngModel)]="selectedCurrency2" (change)="convertCurrency(2)">
+      <option value="UAH">UAH</option>
+      <option value="USD">USD</option>
+      <option value="EUR">EUR</option>
+    </select>
+  </div>
+  
+  <p>{{ inputCurrency1 }} {{ selectedCurrency1 }} = {{ convertedAmount1 }} {{ selectedCurrency2 }}</p>
+  <p>{{ inputCurrency2 }} {{ selectedCurrency2 }} = {{ convertedAmount2 }} {{ selectedCurrency1 }}</p>
+  
